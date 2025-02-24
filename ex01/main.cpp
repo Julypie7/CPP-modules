@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ineimatu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 13:44:36 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/01/08 17:00:56 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/02/24 13:55:14 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ int main()
 	int i = 0;
 	PhoneBook phonebook;
 
+	phonebook::PhoneBook() 
+	{
+    	current_size = 0;  // Initialize current size to 0
+	}
 	std::string command;
 	std::cout << "Enter one of the commands: ADD, SEARCH or EXIT "<< std::endl;
 	std::cin >> command;
