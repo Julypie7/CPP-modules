@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:00:43 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/02/24 14:23:25 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/02/25 15:47:26 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 #include "Contact.hpp"
 # define MAX = 8
 
-class PhoneBook {
+class PhoneBook 
+{
 	private:
 		Contact contacts[MAX];
-		int current_size;
+		int _current_size;
+		int _index;
 	public:
 		PhoneBook();
-		int add();
+		~PhoneBook();
+		
+		int add(Contact contact);
 		int search();
 };
 

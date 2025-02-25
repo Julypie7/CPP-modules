@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:58:17 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/02/24 14:12:05 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/02/25 17:24:18 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,25 @@
 #include <string.h>
 #include "PhoneBook.hpp"
 
-int PhoneBook::add()
+PhoneBook::PhoneBook(void) : _current_size(0)
 {
-    sid::cout << "Enter new contact details: " << std::endl;
-    if (current_size = 8)
+}
+
+PhoneBook::~PhoneBook(void)
+{
+}
+
+int PhoneBook::add(Contact contact)
+{
+    contact.fill_contact(contact)
+    if (_current_size = 8)
     {
         std::out << "PhoneBook is full. Overwritting oldest contact." << std::endl;
-        contacts[0].fillContact();
+        for(int i = 1; )
+            contact[i - 1] = contact[i]
     }
     else
-    {
-        contacts[current_size].fillContact();
-        current_size++;
-    }
+        _contact[_current_size++] = contact;
 }
 
 int fillContact()

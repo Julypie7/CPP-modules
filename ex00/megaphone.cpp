@@ -6,7 +6,7 @@
 /*   By: ineimatu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 13:53:21 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/01/07 14:28:23 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/01/08 13:38:54 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <iostream>
@@ -19,10 +19,10 @@ int main(int argc, char **argv)
 	int j;
 	int a;
 	char str[1000];
-	
+
 	i = 1;
 	a = 0;
-	
+
 	if (argc < 2)
 	{
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" <<std::endl;
