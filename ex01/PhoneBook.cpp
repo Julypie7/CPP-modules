@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:58:17 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/03/13 13:20:14 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/03/13 14:16:08 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ void PhoneBook::add(Contact contact)
 
 void PhoneBook::search()
 {
-    std::cout << "Hola" << std::endl;
+    std::cout << std::setw(10) << std::right << "Index" << "|" << std::setw(10) << std::right << "First Name" << "|" <<std::setw(10) << std::right << "Last Name" << "|" << std::setw(10) << std::right << "Nick name"  << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 13:44:36 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/03/13 13:25:46 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/03/13 14:04:10 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main()
 	{
 
 		std::cout << "\n\t\t Welcome to crappy awesome phonebook !!! \t\t\n" << std::endl;
-		std::cout << "\n\t\t Enter one of the commands: ADD, SEARCH or EXIT \t\t\n"<< std::endl;
+		std::cout << "\t\t Enter one of the commands: ADD, SEARCH or EXIT \t\t\n"<< std::endl;
 		if (!std::getline(std::cin, command))
 		{
 			if (std::cin.eof())
