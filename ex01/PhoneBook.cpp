@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:58:17 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/02/25 17:24:18 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/03/13 13:20:14 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string.h>
 #include "PhoneBook.hpp"
+#include <sstream>
 
-PhoneBook::PhoneBook(void) : _current_size(0)
-{
-}
+PhoneBook::PhoneBook() : _current_size(0), _index(0) {}
 
-PhoneBook::~PhoneBook(void)
-{
-}
+PhoneBook::~PhoneBook() {}
 
-int PhoneBook::add(Contact contact)
+
+void PhoneBook::add(Contact contact)
 {
-    contact.fill_contact(contact)
-    if (_current_size = 8)
+    contact.fill_contact(contact);
+    if (_current_size > MAX)
     {
-        std::out << "PhoneBook is full. Overwritting oldest contact." << std::endl;
-        for(int i = 1; )
-            contact[i - 1] = contact[i]
+        std::cout << "PhoneBook is full. Overwritting oldest contact." << std::endl;
+        _contacts[_index] = contact;
+        _index = (_index + 1) % MAX;
     }
     else
-        _contact[_current_size++] = contact;
+        _contacts[_current_size++] = contact;
+    std::cout << "\nContact has been successfully added :)\n" << std::endl;
 }
 
-int fillContact()
+void PhoneBook::search()
 {
-    
+    std::cout << "Hola" << std::endl;
 }
