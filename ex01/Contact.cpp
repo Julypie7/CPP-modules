@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 11:34:25 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/03/13 13:18:31 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/03/14 12:10:11 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,19 +76,58 @@ void    Contact::fill_contact(Contact& contact)
 	std::string phone_number;
 	std::string darkest_secret;
 
-    std::cout << "Enter contact's first name: ";
-    std::cin >> first_name;
-    contact.setFirstName(first_name);
-    std::cout << "Enter contact's last name: ";
-    std::cin >> last_name;
-    contact.setLastName(last_name);
-    std::cout << "Enter contact's nickname: ";
-    std::cin >> nick_name;
-    contact.setNickname(nick_name);
-    std::cout << "Enter contact's phone_number: ";
-    std::cin >> phone_number;
-    contact.setPhoneNumber(phone_number);
-    std::cout << "Enter contact's darkest secret: ";
-    std::cin >> darkest_secret;
-    contact.setDarkestSecret(darkest_secret);
+    while (1){
+        std::cout << "Enter contact's first name: ";
+        if(!std::getline(std::cin, first_name)){
+            if (std::cin.eof())
+                {
+                    std::cout << "\t\t End of line detected. Exiting program!\t\t\n" <<std::endl;
+                    break;		
+                }
+                break;
+        }
+        contact.setFirstName(first_name);
+        std::cout << "Enter contact's last name: ";
+        if(!std::getline(std::cin, last_name)){
+            if (std::cin.eof())
+                {
+                    std::cout << "\t\t End of line detected. Exiting program!\t\t\n" <<std::endl;
+                    break;		
+                }
+                break;
+        }
+        contact.setLastName(last_name);
+        std::cout << "Enter contact's nickname: ";
+        if(!std::getline(std::cin, nick_name)){
+            if (std::cin.eof())
+                {
+                    std::cout << "\t\t End of line detected. Exiting program!\t\t\n" <<std::endl;
+                    break;		
+                }
+                break;
+        }
+        contact.setNickname(nick_name);
+        std::cout << "Enter contact's phone_number: ";
+        if(!std::getline(std::cin, phone_number)){
+            if (std::cin.eof())
+                {
+                    std::cout << "\t\t End of line detected. Exiting program!\t\t\n" <<std::endl;
+                    break;		
+                }
+                break;
+        }
+        contact.setPhoneNumber(phone_number);
+        std::cout << "Enter contact's darkest secret: ";
+        if(!std::getline(std::cin, darkest_secret)){
+            if (std::cin.eof())
+                {
+                    std::cout << "\t\t End of line detected. Exiting program!\t\t\n" <<std::endl;
+                    break;		
+                }
+                break;
+        }
+        contact.setDarkestSecret(darkest_secret);
+        std::cout << "\nContact has been successfully added :)\n" << std::endl;
+        break;
+    }
 }
