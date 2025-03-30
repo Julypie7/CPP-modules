@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:58:17 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/03/14 12:10:05 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/03/14 12:15:43 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void    PhoneBook::search()
         {
             index = std::stoi(command);
             if (index > _current_size)
-                std::cout << "\t\t Contact index out of the range" << std::endl;
+                std::cout << "\t\t There is no contact with this index" << std::endl;
             else
                 displayContact(_contacts[index - 1]);
          break;
