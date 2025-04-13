@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 22:30:08 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/04/13 09:02:08 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/04/13 11:47:03 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ class HumanB{
         ~HumanB();
         void set_weapon(Weapon& newWeapon);
         void attack(void);       
-}
+};
 
 #endif

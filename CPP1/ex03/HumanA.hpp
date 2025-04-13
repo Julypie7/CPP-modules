@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 22:23:21 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/04/13 10:25:28 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/04/13 11:46:52 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include "Weapon.hpp"
 
 class HumanA
-x{
+{
     private:
         std::string _name;
         Weapon& _weapon;

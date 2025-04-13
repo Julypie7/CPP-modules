@@ -6,7 +6,7 @@
 #    By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/30 16:03:16 by ineimatu          #+#    #+#              #
-#    Updated: 2025/03/30 16:04:20 by ineimatu         ###   ########.fr        #
+#    Updated: 2025/04/13 11:51:59 by ineimatu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,11 @@ SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-$(NAME): MAkefile $(OBJ)
+$(NAME): Makefile $(OBJ)
 		$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 		
 %o.:%.cpp 
-	$(CC) $(FLAGS) ßc $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 all = $(NAME)
 
