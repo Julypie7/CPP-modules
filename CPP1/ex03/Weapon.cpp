@@ -6,24 +6,28 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 18:41:30 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/04/05 18:50:15 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/04/13 09:26:58 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(std::string defType) : _type(defType) {}
+Weapon::Weapon(std::string defType) {
+    this->_type = defType;
+    std::cout << "New weapon of type " << this->_type << "chosen" << std::endl;
+}
 
 Weapon::~Weapon() {
-    std::cout << "Human " << name << "is destroyed!" << std::endl;
+    std::cout << "Weapon " << this->_type << "is destroyed!" << std::endl;
 }
 
-std::string Weapon::getType(void);
+const std::string &Weapon::getType(void)
 {
-   return (_type);
+   return (this->_type);
 }
 
-void  setType(std::string newtype);
+void  Weapon::setType(std::string newtype)
 {
-    _type = newtype;
+    this->_type = newtype;
+    std::cout << "New weapon of type " << this->_type << "chosen" << std::endl;
 }
