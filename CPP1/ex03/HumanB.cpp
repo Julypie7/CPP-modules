@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 15:38:29 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/04/13 09:18:02 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/04/13 12:04:48 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@ HumanB::HumanB(std::string defName) : _nameB(defName) {
 }
 
 HumanB::~HumanB() {
-    std::cout << "Human " << this->_nameB << "is destroyed!" << std::endl;
+    std::cout << "Human " << this->_nameB << " 💀 is destroyed!" << std::endl;
 }
 
 void HumanB::attack(void)
 {
     if (!this->_weapon)
         return ;
-    std::cout << this->_nameB << " attack with their " << this->_weapon->getType() << std::endl;
+    std::cout << this->_nameB << " 👱 attack with their " << this->_weapon->getType() << std::endl;
 }
 
-void HumanB::set_weapon(Weapon& newWeapon)
+void HumanB::setWeapon(Weapon& newWeapon)
 {
     this->_weapon = &newWeapon;
-    std::cout << this->_nameB << " took a weapon!" << std::endl;
+    std::cout << this->_nameB << " 👱 took a weapon!" << std::endl;
 }
