@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:58:17 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/03/14 12:15:43 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/04/26 12:08:54 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,8 @@ void    PhoneBook::search()
 	    }
         else if (command.size() == 1 && command[0] >= '1' && command[0] <= '8')
         {
-            index = std::stoi(command);
-            if (index > _current_size)
+			std::istringstream(command) >> index;
+	        if (index > _current_size)
                 std::cout << "\t\t There is no contact with this index" << std::endl;
             else
                 displayContact(_contacts[index - 1]);
