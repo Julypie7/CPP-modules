@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:58:17 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/04/26 12:08:54 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/04/26 13:28:01 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ PhoneBook::~PhoneBook() {}
 void    PhoneBook::add(Contact contact)
 {
     contact.fill_contact(contact);
-    if (_current_size > MAX)
+    if (_current_size >= MAX)
     {
         std::cout << "PhoneBook is full. Overwritting oldest contact." << std::endl;
         _contacts[_index] = contact;
