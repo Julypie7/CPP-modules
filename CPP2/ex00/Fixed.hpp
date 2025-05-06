@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/30 22:23:21 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/04/26 20:14:50 by ineimatu         ###   ########.fr       */
+/*   Created: 2025/04/26 20:19:42 by ineimatu          #+#    #+#             */
+/*   Updated: 2025/04/26 20:55:33 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 #include <iostream>
 #include <string>
-#include "Weapon.hpp"
 
-class HumanA
+class Fixed
 {
-    private:
-        std::string _name;
-        Weapon& _weapon;
-    public:
-        HumanA(std::string def, Weapon& weaponName);
-        ~HumanA();
-        void attack(void);
-        void setWeapon(const Weapon& newWeapon);    
+  private:
+        int _value;
+        static const int _fractional = 8;
+  public:
+        Fixed(void);
+        Fixed(const Fixed &c);
+        Fixed &operator=(const Fixed &c);
+        ~Fixed(void);
+
+        int getRawBits(void) const;
+        void setRawBits(int const raw);
 };
 
 #endif
