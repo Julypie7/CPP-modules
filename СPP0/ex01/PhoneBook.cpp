@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:58:17 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/04/26 13:28:01 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/05/06 12:23:50 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@ void    PhoneBook::add(Contact contact)
 void    printContact(Contact C)
 {
     if (C.getFirstName().size() >= 10)
-        std::cout << std::setw(10) << std::right << C.getFirstName().substr(0, 9) << "." << "|";
+        std::cout << std::setw(10) << std::right << C.getFirstName().substr(0, 8) << "." << "|";
     else
         std::cout << std::setw(10) << std::right << C.getFirstName() << "|";
     if (C.getLastName().size() >= 10)
-        std::cout << std::setw(10) << std::right << C.getLastName().substr(0, 9) << "." << "|";
+        std::cout << std::setw(10) << std::right << C.getLastName().substr(0, 8) << "." << "|";
     else
         std::cout << std::setw(10) << std::right << C.getLastName() << "|";
     if (C.getNickname().size() >= 10)
-        std::cout << std::setw(10) << std::right << C.getNickname().substr(0, 9) << "." << std::endl;
+        std::cout << std::setw(10) << std::right << C.getNickname().substr(0, 8) << "." << std::endl;
     else
         std::cout << std::setw(10) << std::right << C.getNickname() << std::endl;;
 }
@@ -66,7 +66,7 @@ void    PhoneBook::search()
     std::string command;
     int index;
     
-    std::cout << std::setw(10) << std::right << "Index" << "|" << std::setw(10) << std::right << "First Name" << "|" <<std::setw(10) << std::right << "Last Name" << "|" << std::setw(10) << std::right << "Nickname"  << std::endl;
+    std::cout << std::setw(10) << std::right << "Index" << "| " << std::setw(10) << std::right << "First Name" << "|" <<std::setw(10) << std::right << "Last Name" << "|" << std::setw(10) << std::right << "Nickname"  << std::endl;
     std::cout << std::setw(10) << std::right << "  ---------------------------------------------" << std::endl;
     for (int i = 0; i < _current_size; i++){
         std::cout << std::setw(10) << std::right << i + 1 << "|";

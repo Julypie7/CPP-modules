@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:19:52 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/04/26 21:00:51 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/05/07 20:04:10 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Fixed::Fixed() {
     std::cout << "Default constructor is called" << std::endl;
+	this->_value = 0;
 }
 
 Fixed::~Fixed(){
@@ -22,15 +23,7 @@ Fixed::~Fixed(){
 
 Fixed::Fixed(const Fixed &c) {
     std::cout << "Copy constructor is called" << std::endl;
-    this->_value = c._value;
-}
-
-Fixed &Fixed::operator=(const Fixed &c)
-{
-    std::cout << "Copy assignment operator called" << std::endl;
-    if (this != &c)
-        this->_value = c.getRawBits();
-        return (*this);
+    *this = c;
 }
 
 int Fixed::getRawBits(void) const{
@@ -41,5 +34,14 @@ int Fixed::getRawBits(void) const{
 void Fixed::setRawBits(const int raw)
 {
     std::cout << "setRawBits memeber function called" << std::endl;
-    this->_value = raw;   
+    this->_value = raw;
+}
+
+Fixed &Fixed::operator=(const Fixed &c)
+{
+    std::cout << "Copy assignment operator called" << std::endl;
+    if (this == &c)
+        return (*this);
+	this->_value = c.getRawBits();
+	return (*this);
 }
