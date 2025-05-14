@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ineimatu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/07 20:09:19 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/05/07 20:15:40 by ineimatu         ###   ########.fr       */
+/*   Created: 2025/04/26 20:19:42 by ineimatu          #+#    #+#             */
+/*   Updated: 2025/05/14 22:01:12 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 class Fixed
 {
@@ -22,18 +23,19 @@ class Fixed
         int _value;
         static const int _fractional = 8;
   public:
-        Fixed(void);
+        Fixed();
         Fixed(const Fixed &c);
-		Fixed(const int integer);
-		Fixed(const float floating);
+		Fixed(const	int num);
+		Fixed(const float num);
         Fixed &operator=(const Fixed &c);
         ~Fixed(void);
 
-		float toFloat(void) const;
-		int toInt(void) const;
         int getRawBits(void) const;
         void setRawBits(int const raw);
+		float toFloat(void) const;
+		int toInt(void) const;
 };
 
-#endif
+std::ostream&	operator<<(std::ostream&, const Fixed&);
 
+#endif
