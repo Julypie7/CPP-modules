@@ -6,15 +6,16 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 15:38:29 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/04/13 12:04:48 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/05/14 19:36:35 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 #include "Weapon.hpp"
 
-HumanB::HumanB(std::string defName) : _nameB(defName) {
+HumanB::HumanB(std::string defName) {
     this->_weapon = NULL;
+    this->_nameB = defName;
 }
 
 HumanB::~HumanB() {

@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 15:42:14 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/04/13 16:41:26 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/05/14 19:31:01 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,5 @@ int main()
     Harl harl;
     
     harl.complain("DEBUG");
+    harl.complain("");
 }

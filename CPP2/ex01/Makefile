@@ -3,28 +3,28 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+         #
+#    By: ineimatu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/04/13 12:16:13 by ineimatu          #+#    #+#              #
-#    Updated: 2025/05/14 19:39:42 by ineimatu         ###   ########.fr        #
+#    Created: 2025/05/07 20:08:45 by ineimatu          #+#    #+#              #
+#    Updated: 2025/05/07 20:09:09 by ineimatu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Sed_is_for_losers
+NAME = fixed
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 CC = c++
 
-HEAD = 
+SRC = main.cpp Fixed.cpp
 
-SRC = main.cpp
+HEAD = Fixed.hpp
 
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): Makefile $(HEAD) $(OBJ)
 		$(CC) $(FLAGS) $(OBJ) -o $(NAME)
-		
+
 %o.:%.cpp $(HEAD)
 	$(CC) $(FLAGS) -c $< -o $@
 

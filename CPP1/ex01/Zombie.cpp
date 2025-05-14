@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 14:38:41 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/03/30 15:33:32 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/05/14 18:48:38 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 Zombie::Zombie() {}
 
 Zombie::~Zombie() {
-    std::cout << "Zombie " << name << " is destroyed." << std::endl;
+    std::cout << "Zombie " << this->name << " is destroyed." << std::endl;
 }
 
 std::string	Zombie::getName(void)
 {
-	return (name);
+	return (this->name);
 }
 
 void	Zombie::setName(std::string zombiename)
 {
-	name = zombiename;
+	this->name = zombiename;
 }
 
 void    Zombie::announce() {
