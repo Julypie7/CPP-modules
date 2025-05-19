@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 21:56:50 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/05/14 22:07:03 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/05/17 18:35:36 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
+
 
 class Fixed
 {
