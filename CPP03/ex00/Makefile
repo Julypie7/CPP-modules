@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ineimatu <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/06 20:21:47 by ineimatu          #+#    #+#              #
-#    Updated: 2025/05/06 20:23:04 by ineimatu         ###   ########.fr        #
+#    Updated: 2025/05/20 07:57:29 by ineimatu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,10 +22,10 @@ SRC = ClapTrap.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-$(NAME): Makefile $(HEAD) $(OBJ)
+$(NAME): $(HEAD) $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o:%.cpp $(HEAD)
+%.o:%.cpp $(HEAD) Makefile
 	$(CC) $(FLAGS) -c $< -o $@
 
 all = $(NAME)
