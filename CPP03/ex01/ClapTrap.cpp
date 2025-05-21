@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 20:23:19 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/05/20 19:48:49 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/05/20 20:06:10 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,44 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &claptrap)
 	    _attackDamage = claptrap._attackDamage;
     }
 	return *this;
+}
+
+void	ClapTrap::setName(std::string name)
+{
+	_name = name;
+}
+
+void	ClapTrap::setHitPoints(unsigned int amount)
+{
+	_hitPoints = amount;
+}
+
+void	ClapTrap::setEnergyPoints(unsigned int amount)
+{
+	_energyPoints = amount;
+}
+
+void	ClapTrap::setAttackDamage(unsigned int amount)
+{
+	_attackDamage = amount;
+}
+
+std::string	ClapTrap::getName(void) const
+{
+	return (_name);
+}
+
+int	ClapTrap::getHitPoints(void) const
+{
+	return (_hitPoints);
+}
+
+int	ClapTrap::getEnergyPoints(void) const
+{
+	return (_energyPoints);
+}
+
+int	ClapTrap::getAttackDamage(void) const
+{
+	return (_attackDamage);
 }
