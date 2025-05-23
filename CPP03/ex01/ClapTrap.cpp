@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 20:23:19 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/05/20 20:06:10 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/05/21 17:35:45 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,6 @@ ClapTrap::~ClapTrap(){
     std::cout << "Destructor is called!" << std::endl;
 }
 
-void    ClapTrap::setName(std::string name){
-    _name = name;
-}
 
 void   ClapTrap::attack(const std::string &target){
     if (_hitPoints != 0 && _energyPoints != 0){

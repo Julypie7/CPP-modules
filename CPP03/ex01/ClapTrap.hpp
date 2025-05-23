@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 20:23:28 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/05/20 20:04:46 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/05/21 17:27:58 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string>
 
 class ClapTrap {
-	private:
+	protected:
 		std::string _name;
 		int _hitPoints;
 		int _energyPoints;
@@ -29,8 +29,6 @@ class ClapTrap {
 		ClapTrap(const ClapTrap &copy);
 		ClapTrap &operator=(const ClapTrap &copy);
 		~ClapTrap();
-		
-		void setName(std::string name);
 		
 		void attack(const std::string& target);
 		void takeDamage(unsigned int ammount);

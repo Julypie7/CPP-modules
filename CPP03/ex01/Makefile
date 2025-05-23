@@ -6,19 +6,19 @@
 #    By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/06 20:21:47 by ineimatu          #+#    #+#              #
-#    Updated: 2025/05/20 07:57:29 by ineimatu         ###   ########.fr        #
+#    Updated: 2025/05/21 17:12:12 by ineimatu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = AaaaaaaandOpen!
+NAME = Serena_my_love!
 
 FLAGS = -Wall -Wextra -Werror -std=c++98 
 
 CC = c++
 
-HEAD = ClapTrap.hpp
+HEAD = ClapTrap.hpp ScavTrap.hpp
 
-SRC = ClapTrap.cpp main.cpp
+SRC = ClapTrap.cpp ScavTrap.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

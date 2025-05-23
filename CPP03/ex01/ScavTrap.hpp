@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 19:55:46 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/05/20 20:00:29 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/05/21 12:13:07 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class ScavTrap : public ClapTrap
             ScavTrap &operator=(const ScavTrap &assin);
             
             void attack(const std::string &target);
-            void guarGate();
+            void guardGate();
 };
 
 #endif
