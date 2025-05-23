@@ -6,7 +6,7 @@
 /*   By: ineimatu <ineimatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 15:07:06 by ineimatu          #+#    #+#             */
-/*   Updated: 2025/05/22 15:48:32 by ineimatu         ###   ########.fr       */
+/*   Updated: 2025/05/23 14:59:54 by ineimatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int main(void)
     WrongAnimal *wrong_animal = new WrongAnimal();
     WrongAnimal *wrong_cat = new WrongCat();
     wrong_animal->makeSound();
+    std::cout << "Wrong cat is making sound: "<< std::endl;
     wrong_cat->makeSound();
 
     std::cout << std::endl;
